@@ -1,9 +1,11 @@
 package kz.edu.nu.cs.exercise;
+import com.google.gson.*;
 
 public class MyContact {
     private String name;
     private int age;
     private String number;
+    private static Gson gson = new Gson();
     
     public MyContact(String name, int age, String number) {
         this.name = name;
@@ -12,8 +14,8 @@ public class MyContact {
     }
     
     public static MyContact MakeMyContact(String s) {
-        // complete this method, use Gson
-        return null;
+
+        return gson.fromJson(s, MyContact.class);
     }
 
     public String getName() {
