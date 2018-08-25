@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
-
+//123
 public class ContactList {
     private List<MyContact> list;
     
