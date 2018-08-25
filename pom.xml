@@ -7,6 +7,8 @@
   <artifactId>jsonexercise-361</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
+  
+  
 
   <name>jsonexercise-361</name>
   <url>http://maven.apache.org</url>
@@ -22,7 +24,12 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-
+   
+   <dependency>
+  <groupId>com.google.code.gson</groupId>
+  <artifactId>gson</artifactId>
+  <version>2.8.5</version>
+</dependency>
   </dependencies>
   
   <build>
