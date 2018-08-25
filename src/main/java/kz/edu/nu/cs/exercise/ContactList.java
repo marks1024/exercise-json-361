@@ -14,8 +14,7 @@ public class ContactList {
     public static ContactList MakeContactList(String s) {
         // Complete this method, use Gson
         Gson gson = new Gson();
-        ContactList g = gson.fromJson(s, ContactList.class);
-        return g;
+        return gson.fromJson(s, ContactList.class);
     }
     
     public void addContact(MyContact c) {
