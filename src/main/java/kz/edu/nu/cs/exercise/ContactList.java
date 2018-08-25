@@ -6,15 +6,14 @@ import com.google.gson.*;
 
 public class ContactList {
     private List<MyContact> list;
-    private static Gson gson = new Gson();
     
     public ContactList() {
         list = new ArrayList<MyContact>();
     }
     
     public static ContactList MakeContactList(String s) {
-        ContactList lst =  gson.fromJson(s, ContactList.class);
-        return lst;
+    	Gson gson = new Gson();
+        return gson.fromJson(s, ContactList.class);
     }
     
     public void addContact(MyContact c) {

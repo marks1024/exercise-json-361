@@ -5,7 +5,6 @@ public class MyContact {
     private String name;
     private int age;
     private String number;
-    private static Gson gson = new Gson();
     
     public MyContact(String name, int age, String number) {
         this.name = name;
@@ -14,7 +13,7 @@ public class MyContact {
     }
     
     public static MyContact MakeMyContact(String s) {
-
+    	Gson gson = new Gson();
         return gson.fromJson(s, MyContact.class);
     }
 
