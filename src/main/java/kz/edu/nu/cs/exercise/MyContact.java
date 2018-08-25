@@ -1,10 +1,12 @@
 package kz.edu.nu.cs.exercise;
 
+import com.google.gson.Gson;
+
 public class MyContact {
     private String name;
     private int age;
     private String number;
-    
+
     public MyContact(String name, int age, String number) {
         this.name = name;
         this.age = age;
@@ -12,8 +14,10 @@ public class MyContact {
     }
     
     public static MyContact MakeMyContact(String s) {
+        Gson gson = new Gson();
         // complete this method, use Gson
-        return null;
+        MyContact g = gson.fromJson(s, MyContact.class);
+        return g;
     }
 
     public String getName() {
