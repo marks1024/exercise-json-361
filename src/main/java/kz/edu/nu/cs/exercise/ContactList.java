@@ -9,7 +9,7 @@ public class ContactList {
     private List<MyContact> list;
 
     public ContactList() {
-        list = new ArrayList<MyContact>();
+        list = new ArrayList<>();
     }
 
     public static ContactList MakeContactList(String s) {
@@ -26,8 +26,6 @@ public class ContactList {
     }
 
     public MyContact getFirstContact() {
-//        if (list.isEmpty())
-//            return null;
         return list.get(0);
     }
 
