@@ -1,5 +1,9 @@
 package kz.edu.nu.cs.exercise;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 public class MyContact {
     private String name;
     private int age;
@@ -12,11 +16,16 @@ public class MyContact {
     }
     
     public static MyContact MakeMyContact(String s) {
-        // complete this method, use Gson
-        return null;
+    	JsonElement jelement = new JsonParser().parse(s);
+        JsonObject  jobject = jelement.getAsJsonObject();
+        String name = jobject.get("name").getAsString();
+        int age = jobject.get("age").getAsInt();
+        String number = jobject.get("number").getAsString();
+        MyContact result = new MyContact(name, age, number);
+        return result;
     }
 
-    public String getName() {
+	public String getName() {
         return name;
     }
 
