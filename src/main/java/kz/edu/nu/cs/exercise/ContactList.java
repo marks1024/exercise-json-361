@@ -12,6 +12,7 @@ public class ContactList {
     }
     
     public static ContactList MakeContactList(String s) {
+        int a=1;
         Gson gson = new Gson();
         ContactList contactList = gson.fromJson(s, ContactList.class);
         return contactList;
