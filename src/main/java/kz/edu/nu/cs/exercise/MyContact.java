@@ -1,5 +1,10 @@
 package kz.edu.nu.cs.exercise;
 
+import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 public class MyContact {
     private String name;
     private int age;
@@ -12,8 +17,10 @@ public class MyContact {
     }
     
     public static MyContact MakeMyContact(String s) {
-        // complete this method, use Gson
-        return null;
+    	Gson gson = new Gson();
+    	MyContact t = gson.fromJson(s, MyContact.class); 
+    	MyContact ans = new MyContact(t.getName(), t.getAge(), t.getNumber());
+        return ans;
     }
 
     public String getName() {

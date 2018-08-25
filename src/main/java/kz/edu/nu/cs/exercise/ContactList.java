@@ -3,6 +3,13 @@ package kz.edu.nu.cs.exercise;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
+
 public class ContactList {
     private List<MyContact> list;
     
@@ -11,8 +18,21 @@ public class ContactList {
     }
     
     public static ContactList MakeContactList(String s) {
-        // Complete this method, use Gson
-        return null;
+    	ContactList ans = new ContactList();
+    	Gson gson = new Gson();
+/*    	JsonParser parser = new JsonParser();
+    	JsonObject jo = (JsonObject)parser.parse(s);
+    	JsonArray array = jo.getAsJsonArray("list");
+    	
+    	while(array.size() > 0) 
+    	{
+    		MyContact t = gson.fromJson(array.get(0), MyContact.class);
+    		ans.addContact(t);
+    		array.remove(0);
+    	}*/
+    	
+    	ans = gson.fromJson(s, ContactList.class);
+        return ans;
     }
     
     public void addContact(MyContact c) {
@@ -24,14 +44,10 @@ public class ContactList {
     }
     
     public MyContact getFirstContact() {
-        // complete this method
-        // return correct value
-        return null;
+        return list.get(0);
     }
     
     public int getSize() {
-        // complete this method
-        // return correct value
-        return 0;
+        return list.size();
     }
 }
