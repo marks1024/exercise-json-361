@@ -2,7 +2,9 @@ package kz.edu.nu.cs.exercise;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -16,7 +18,9 @@ public class ContactList {
     }
     
     public static ContactList MakeContactList(String s) {
-    	JsonElement jelement = new JsonParser().parse(s);
+    	Gson gson = new Gson();
+    	ContactList ans = gson.fromJson(s, ContactList.class);
+    	/*JsonElement jelement = new JsonParser().parse(s);
         JsonObject  jobject = jelement.getAsJsonObject();
         JsonArray arr = jobject.getAsJsonArray("list");
         ContactList ans = new ContactList();
@@ -27,7 +31,7 @@ public class ContactList {
             String number = curObj.get("number").getAsString();
             MyContact contact = new MyContact(name, age, number);
             ans.list.add(contact);
-        }
+        }*/
         return ans;
     }
     
