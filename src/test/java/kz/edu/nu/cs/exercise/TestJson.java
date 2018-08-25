@@ -1,8 +1,11 @@
-package kz.edu.nu.cs.exercise;
+package test.java.kz.edu.nu.cs.exercise;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import main.java.kz.edu.nu.cs.exercise.ContactList;
+import main.java.kz.edu.nu.cs.exercise.MyContact;
 
 public class TestJson {
     
