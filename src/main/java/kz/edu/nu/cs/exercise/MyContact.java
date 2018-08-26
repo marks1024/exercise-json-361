@@ -1,5 +1,5 @@
 package kz.edu.nu.cs.exercise;
-inport com.google.gson*;
+import com.google.gson*;
 
 public class MyContact {
     private String name;
