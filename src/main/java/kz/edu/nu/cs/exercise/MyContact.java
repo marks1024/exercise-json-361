@@ -14,7 +14,7 @@ public class MyContact {
     
     public static MyContact MakeMyContact(String s) {
         Gson gson=new Gson();
-        return gson.fromJson(s, Mycontact.class);
+        return gson.fromJson(s, MyContact.class);
     }
 
     public String getName() {

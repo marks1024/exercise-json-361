@@ -1,7 +1,7 @@
 package kz.edu.nu.cs.exercise;
 
 import java.util.ArrayList;
-import com.google.json.*;
+import com.google.gson.Gson;
 import java.util.List;
 
 public class ContactList {
