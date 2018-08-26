@@ -3,6 +3,8 @@ package kz.edu.nu.cs.exercise;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.Gson;
+
 public class ContactList {
     private List<MyContact> list;
     
@@ -12,7 +14,9 @@ public class ContactList {
     
     public static ContactList MakeContactList(String s) {
         // Complete this method, use Gson
-        return null;
+    	Gson gson = new Gson();
+    	ContactList myContactList = gson.fromJson(s, ContactList.class);
+        return myContactList;
     }
     
     public void addContact(MyContact c) {
@@ -26,12 +30,14 @@ public class ContactList {
     public MyContact getFirstContact() {
         // complete this method
         // return correct value
-        return null;
+    	MyContact mc = list.get(0);
+        return mc;
     }
     
     public int getSize() {
         // complete this method
         // return correct value
-        return 0;
+    	int a = list.size();
+        return a;
     }
 }
