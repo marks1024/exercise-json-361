@@ -19,7 +19,7 @@ public class MyContact {
     	Gson gson = new Gson();
     	MyContact mc = gson.fromJson(s, MyContact.class);
     	
-        return null;
+        return mc;
     }
 
     public String getName() {

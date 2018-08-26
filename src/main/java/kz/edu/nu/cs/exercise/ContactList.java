@@ -17,7 +17,7 @@ public class ContactList {
     	Gson gson = new Gson();
     	ContactList cl = gson.fromJson(s, ContactList.class);
     	
-        return null;
+        return cl;
     }
     
     public void addContact(MyContact c) {
