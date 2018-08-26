@@ -2,7 +2,7 @@ package kz.edu.nu.cs.exercise;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.google.gson*;
+import com.google.gson.*;
 
 public class ContactList {
     private List<MyContact> list;
