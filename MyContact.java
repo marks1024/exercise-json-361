@@ -17,10 +17,6 @@ public class MyContact {
         Gson gson = new Gson();
         MyContact g = gson.fromJson(s, MyContact.class);
         return g;
-
-
-
-        // complete this method, use Gson
     }
 
     public String getName() {
@@ -46,4 +42,5 @@ public class MyContact {
     public void setNumber(String number) {
         this.number = number;
     }
+}
 
