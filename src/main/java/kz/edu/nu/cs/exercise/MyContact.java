@@ -1,6 +1,6 @@
 package kz.edu.nu.cs.exercise;
 
-import com.google.gson*;
+import com.google.gson.*;
 
 public class MyContact {
     private String name;
