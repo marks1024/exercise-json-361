@@ -12,7 +12,9 @@ public class ContactList {
     
     public static ContactList MakeContactList(String s) {
         // Complete this method, use Gson
-        return null;
+        Gson gson = new Gson();
+        ContactList cl = gson.fromJson(s, ContactList.class);
+        return cl;
     }
     
     public void addContact(MyContact c) {
@@ -26,12 +28,13 @@ public class ContactList {
     public MyContact getFirstContact() {
         // complete this method
         // return correct value
-        return null;
+        MyContact c = list.get(0);
+        return c;
     }
     
     public int getSize() {
         // complete this method
         // return correct value
-        return 0;
+        return list.size();
     }
 }
