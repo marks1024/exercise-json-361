@@ -30,14 +30,14 @@ public class ContactList {
     public MyContact getFirstContact() {
         // complete this method
         // return correct value
-    	list.get(0);
-        return null;
+    	MyContact mc = list.get(0);
+        return mc;
     }
     
     public int getSize() {
         // complete this method
         // return correct value
-    	list.size();
-        return 0;
+    	int a = list.size();
+        return a;
     }
 }
