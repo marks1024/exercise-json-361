@@ -18,7 +18,6 @@ public class ContactList {
         return g;
     }
 
-
     public void addContact(MyContact c) {
         list.add(c);
     }
@@ -28,10 +27,11 @@ public class ContactList {
     }
 
     public MyContact getFirstContact() {
-        return list.get(0);
+         return list.get(0);
     }
 
     public int getSize() {
         return list.size();
     }
 }
+
