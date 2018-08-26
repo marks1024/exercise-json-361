@@ -34,4 +34,5 @@ public class ContactList {
     public int getSize() {
     return list.size();
     }
+}
 
