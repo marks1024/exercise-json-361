@@ -13,7 +13,7 @@ public class ContactList {
     public static ContactList MakeContactList(String s) {
         // Complete this method, use Gson
         Gson gson=new Gson();
-        ContactList clist = gson.fronJson(s, ContactList.class);
+        ContactList clist = gson.fromJson(s, ContactList.class);
         return clist;
     }
     
