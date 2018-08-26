@@ -2,6 +2,7 @@ package kz.edu.nu.cs.exercise;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.google.gson*;
 
 public class ContactList {
     private List<MyContact> list;
@@ -28,8 +29,7 @@ public class ContactList {
     public MyContact getFirstContact() {
         // complete this method
         // return correct value
-        MyContact c = list.get(0);
-        return c;
+        return list.get(0);
     }
     
     public int getSize() {
