@@ -12,8 +12,8 @@ public class MyContact {
     }
     
     public static MyContact MakeMyContact(String s) {
-        // complete this method, use Gson
-        return null;
+	Gson gson = new Gson();
+	return gson.fromJson(s, MyContact.class);
     }
 
     public String getName() {
